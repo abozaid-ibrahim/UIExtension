@@ -10,6 +10,7 @@
 		6C5DE7362275BB3F001A9FB6 /* UIExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C5DE72C2275BB3F001A9FB6 /* UIExtensions.framework */; };
 		6C5DE73B2275BB3F001A9FB6 /* UIExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5DE73A2275BB3F001A9FB6 /* UIExtensionsTests.swift */; };
 		6C5DE73D2275BB3F001A9FB6 /* UIExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5DE72F2275BB3F001A9FB6 /* UIExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C5DE7472275BB55001A9FB6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5DE7462275BB55001A9FB6 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		6C5DE7352275BB3F001A9FB6 /* UIExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C5DE73A2275BB3F001A9FB6 /* UIExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensionsTests.swift; sourceTree = "<group>"; };
 		6C5DE73C2275BB3F001A9FB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C5DE7462275BB55001A9FB6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				6C5DE72F2275BB3F001A9FB6 /* UIExtensions.h */,
 				6C5DE7302275BB3F001A9FB6 /* Info.plist */,
+				6C5DE7462275BB55001A9FB6 /* UIImageView.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					6C5DE72B2275BB3F001A9FB6 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					6C5DE7342275BB3F001A9FB6 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C5DE7472275BB55001A9FB6 /* UIImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		6C5DE7412275BB3F001A9FB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = abuzeid.UIExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		6C5DE7422275BB3F001A9FB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +397,7 @@
 		6C5DE7442275BB3F001A9FB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +415,7 @@
 		6C5DE7452275BB3F001A9FB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
