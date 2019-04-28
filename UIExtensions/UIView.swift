@@ -13,7 +13,10 @@ extension UIView {
     private struct AssociatedKey {
         static var rounded = "UIView.rounded"
     }
-    
+    func setRadius(radius: CGFloat? = nil) {
+        self.layer.cornerRadius = radius ?? self.frame.width / 2;
+        self.layer.masksToBounds = true;
+    }
     @IBInspectable var rounded: Bool {
         get {
             if let rounded = objc_getAssociatedObject(self, &AssociatedKey.rounded) as? Bool {
