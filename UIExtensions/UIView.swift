@@ -6,13 +6,12 @@
 //  Copyright © 2019 abuzeid. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 @IBDesignable
 public extension UIView {
     private struct AssociatedKey {
         static var rounded = "UIView.rounded"
-
     }
     @IBInspectable public var cornerRadiusV: CGFloat {
         get {
@@ -55,7 +54,7 @@ public extension UIView {
             layer.cornerRadius = CGFloat(newValue ? 1.0 : 0.0) * min(bounds.width, bounds.height) / 2
         }
     }
-
+    
     public func roundedTopLeft(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topLeft],
@@ -93,7 +92,7 @@ public extension UIView {
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-   public  func roundedBottom(){
+    public  func roundedBottom(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.bottomRight , .bottomLeft],
                                      cornerRadii: CGSize(width: 15, height: 15))
@@ -102,7 +101,7 @@ public extension UIView {
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-   public func roundedTop(){
+    public func roundedTop(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topRight , .topLeft],
                                      cornerRadii: CGSize(width: 15, height: 15))
@@ -111,7 +110,7 @@ public extension UIView {
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-   public func roundedLeft(){
+    public func roundedLeft(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topLeft , .bottomLeft],
                                      cornerRadii: CGSize(width: 15, height: 15))
@@ -120,7 +119,7 @@ public extension UIView {
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-   public func roundedRight(){
+    public func roundedRight(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topRight , .bottomRight],
                                      cornerRadii: CGSize(width: 15, height: 15))
@@ -129,7 +128,7 @@ public extension UIView {
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
-   public func roundedAllCorner(){
+    public func roundedAllCorner(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topRight , .bottomRight , .topLeft , .bottomLeft],
                                      cornerRadii: CGSize(width: 15, height: 15))
